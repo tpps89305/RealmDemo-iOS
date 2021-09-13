@@ -22,4 +22,13 @@ class DemoDBHandler: NSObject {
         realm.objects(DemoUser.self)
     }
     
+    func updateUser(originUser: DemoUser, updateUser: DemoUser) {
+        try! realm.write {
+            originUser.name = updateUser.name
+            originUser.age = updateUser.age
+            originUser.address = updateUser.address
+            realm.add(originUser, update: .modified)
+        }
+    }
+    
 }

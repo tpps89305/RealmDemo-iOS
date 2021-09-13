@@ -57,7 +57,7 @@
         <!--新增資料-->
         <scene sceneID="aJx-QE-6fW">
             <objects>
-                <viewController id="8Xe-Ck-QnS" customClass="AddDataViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Xe-Ck-QnS" customClass="AddUserViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xHU-Yy-FTe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--閱覽資料-->
         <scene sceneID="dAm-ca-oTT">
             <objects>
-                <tableViewController id="Wba-6u-aMG" customClass="LoadDataViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Wba-6u-aMG" customClass="LoadUsersViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r4R-7u-jHF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,10 +200,99 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="閱覽資料" id="jk8-cB-hZz"/>
+                    <connections>
+                        <segue destination="gsE-QI-biZ" kind="show" identifier="updateUser" id="z2e-CD-LSe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vv0-o5-bHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1176.8115942028987" y="330.13392857142856"/>
+        </scene>
+        <!--更新資料-->
+        <scene sceneID="b1p-Lf-uJ0">
+            <objects>
+                <viewController id="gsE-QI-biZ" customClass="UpdateUserViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n2g-W9-9gI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fq-xK-6Aj">
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ng2-FI-AkY">
+                                <rect key="frame" x="16" y="133" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BML-x6-K3L">
+                                <rect key="frame" x="16" y="199" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="年齡" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-UH-se0">
+                                <rect key="frame" x="16" y="228" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-Hv-WIR">
+                                <rect key="frame" x="16" y="294" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbs-ww-YRc">
+                                <rect key="frame" x="16" y="323" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="location"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byM-Bl-Ude">
+                                <rect key="frame" x="186.5" y="453" width="41" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="儲存"/>
+                                <connections>
+                                    <action selector="updateUser:" destination="gsE-QI-biZ" eventType="touchUpInside" id="rPn-5u-3Yd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e7J-mA-Bpa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1fq-xK-6Aj" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="73T-8Q-WIi"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="GIg-UH-se0" secondAttribute="trailing" constant="16" id="8dx-aG-f4R"/>
+                            <constraint firstItem="BML-x6-K3L" firstAttribute="top" secondItem="Ng2-FI-AkY" secondAttribute="bottom" constant="32" id="AiP-xI-Y5N"/>
+                            <constraint firstItem="GIg-UH-se0" firstAttribute="top" secondItem="BML-x6-K3L" secondAttribute="bottom" constant="8" id="AoT-Xh-jhO"/>
+                            <constraint firstItem="Ng2-FI-AkY" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="DfN-SZ-FPc"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="Ng2-FI-AkY" secondAttribute="trailing" constant="16" id="EaI-Ti-vzT"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="1fq-xK-6Aj" secondAttribute="trailing" constant="16" id="F0I-8L-Mip"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="BML-x6-K3L" secondAttribute="trailing" constant="16" id="Kwz-Te-Dsi"/>
+                            <constraint firstItem="byM-Bl-Ude" firstAttribute="centerX" secondItem="n2g-W9-9gI" secondAttribute="centerX" id="LTx-SF-d6C"/>
+                            <constraint firstItem="BML-x6-K3L" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="OE5-2h-LKA"/>
+                            <constraint firstItem="1fq-xK-6Aj" firstAttribute="top" secondItem="e7J-mA-Bpa" secondAttribute="top" constant="16" id="VLb-nH-3e0"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="FFl-Hv-WIR" secondAttribute="trailing" constant="16" id="dQr-aC-kcv"/>
+                            <constraint firstItem="GIg-UH-se0" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="e08-Rx-1LJ"/>
+                            <constraint firstItem="byM-Bl-Ude" firstAttribute="top" secondItem="Bbs-ww-YRc" secondAttribute="bottom" constant="96" id="fBj-HV-7aa"/>
+                            <constraint firstItem="FFl-Hv-WIR" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="lOs-MN-EtI"/>
+                            <constraint firstItem="Bbs-ww-YRc" firstAttribute="top" secondItem="FFl-Hv-WIR" secondAttribute="bottom" constant="8" id="lwR-f7-BgW"/>
+                            <constraint firstItem="Bbs-ww-YRc" firstAttribute="leading" secondItem="e7J-mA-Bpa" secondAttribute="leading" constant="16" id="rWi-FF-drh"/>
+                            <constraint firstItem="Ng2-FI-AkY" firstAttribute="top" secondItem="1fq-xK-6Aj" secondAttribute="bottom" constant="8" id="vYE-5r-ZBN"/>
+                            <constraint firstItem="e7J-mA-Bpa" firstAttribute="trailing" secondItem="Bbs-ww-YRc" secondAttribute="trailing" constant="16" id="y8D-r5-i9P"/>
+                            <constraint firstItem="FFl-Hv-WIR" firstAttribute="top" secondItem="GIg-UH-se0" secondAttribute="bottom" constant="32" id="zbm-Ao-K9c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="更新資料" id="KIm-MF-EkK"/>
+                    <connections>
+                        <outlet property="fieldAddress" destination="Bbs-ww-YRc" id="BaU-lO-8lg"/>
+                        <outlet property="fieldAge" destination="GIg-UH-se0" id="dm8-sz-nxD"/>
+                        <outlet property="fieldName" destination="Ng2-FI-AkY" id="HXe-Iv-edd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocq-kp-4LV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PTW-2g-0nI">

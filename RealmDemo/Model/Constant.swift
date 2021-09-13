@@ -11,5 +11,6 @@ class Constant: NSObject {
     class SegueID {
         static let ADD_DATA = "addData"
         static let LOAD_DATA = "loadData"
+        static let UPDATE_DATA = "updateUser"
     }
 }

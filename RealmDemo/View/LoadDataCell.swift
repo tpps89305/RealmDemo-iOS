@@ -18,7 +18,7 @@ class LoadDataCell: UITableViewCell {
         // Initialization code
     }
     
-    func setup(viewModel: LoadDataCellViewModel) {
+    func setup(viewModel: LoadUsersCellViewModel) {
         labelName.text = viewModel.user.name
         labelAge.text = String("年齡：\(viewModel.user.age)")
         labelAddress.text = String("地址：\(viewModel.user.address)")

@@ -1,5 +1,5 @@
 //
-//  AddDataViewController.swift
+//  UpdateUserViewController.swift
 //  RealmDemo
 //
 //  Created by 楊朝富 on 2021/9/13.
@@ -7,33 +7,32 @@
 
 import UIKit
 
-class AddDataViewController: UIViewController {
+class UpdateUserViewController: UIViewController {
 
     @IBOutlet weak var fieldName: UITextField!
     @IBOutlet weak var fieldAge: UITextField!
     @IBOutlet weak var fieldAddress: UITextField!
     
-    let viewModel = AddDataViewModel()
+    var user: DemoUser!
+    private let viewModel = UpdateUserViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fieldName.text = user.name
+        fieldAge.text = String(user.age)
+        fieldAddress.text = user.address
     }
     
-    @IBAction func addUser(_ sender: UIButton) {
-        let name = fieldName.text ?? ""
-        let age = Int(fieldAge.text ?? "") ?? 0
-        let address = fieldAddress.text ?? ""
+    @IBAction func updateUser(_ sender: UIButton) {
+        let updateUser = DemoUser()
+        updateUser.name = fieldName.text ?? ""
+        updateUser.age = Int(fieldAge.text ?? "") ?? 0
+        updateUser.address = fieldAddress.text ?? ""
         
-        if name == "" || age == 0 || address == "" {
-            showAlertDialog(title: "新增失敗", message: "請填入所有資訊")
-            return
-        }
-        
-        let user = DemoUser.init(name: name, age: age, address: address)
-        viewModel.addData(user: user)
-        showAlertDialog(title: "新增完畢")
+        viewModel.updateUser(originUser: user, updateUser: updateUser)
+        showAlertDialog(title: "更新完畢")
     }
     
     private func showAlertDialog(title: String, message: String = "") {
