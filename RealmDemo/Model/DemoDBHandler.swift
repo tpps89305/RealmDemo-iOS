@@ -18,8 +18,12 @@ class DemoDBHandler: NSObject {
         }
     }
     
-    func loadUsers() -> Results<DemoUser> {
-        realm.objects(DemoUser.self)
+    func loadUsers(name: String) -> Results<DemoUser> {
+        if name == "" {
+            return realm.objects(DemoUser.self)
+        } else {
+            return realm.objects(DemoUser.self).filter("name CONTAINS '\(name)'")
+        }
     }
     
     func updateUser(originUser: DemoUser, updateUser: DemoUser) {
@@ -28,6 +32,12 @@ class DemoDBHandler: NSObject {
             originUser.age = updateUser.age
             originUser.address = updateUser.address
             realm.add(originUser, update: .modified)
+        }
+    }
+    
+    func deleteUser(user: DemoUser) {
+        try! realm.write {
+            realm.delete(user)
         }
     }
     

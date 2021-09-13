@@ -13,12 +13,18 @@ class LoadUsersViewModel: NSObject {
     var cellViewModels: [LoadUsersCellViewModel] = []
     var onRequestEnd:(() -> Void)?
     
-    func getUsers() {
-        let result = DemoDBHandler().loadUsers()
+    func getUsers(with name: String = "") {
+        let result = DemoDBHandler().loadUsers(name: name)
+        cellViewModels.removeAll()
         for each in result {
             cellViewModels.append(LoadUsersCellViewModel(user: each))
         }
         onRequestEnd?()
+    }
+    
+    func deleteUser(at row: Int) {
+        DemoDBHandler().deleteUser(user: cellViewModels[row].user)
+        cellViewModels.remove(at: row)
     }
     
 }

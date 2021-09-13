@@ -7,15 +7,27 @@
 
 import UIKit
 
-class LoadUsersViewController: UITableViewController {
+class LoadUsersViewController: UITableViewController, UISearchBarDelegate {
     
+    let searchController = UISearchController(searchResultsController: nil)
     private let viewModel = LoadUsersViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initViews()
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.getUsers()
+    }
+    
+    func initViews() {
+        navigationItem.searchController = searchController
+        navigationItem.searchController?.searchBar.delegate = self
+        // Avoid issue of cannot select cell(s)
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     private func bindViewModel() {
@@ -24,6 +36,18 @@ class LoadUsersViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
         }
+    }
+    
+    private func askDelete(indexPath: IndexPath) {
+        let controller = UIAlertController(title: "重大操作", message: "確定要刪除 \(viewModel.cellViewModels[indexPath.row].user.name) 嗎？", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "刪除", style: .destructive) { action in
+            self.viewModel.deleteUser(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        let cancelAction = UIAlertAction(title: "算了", style: .cancel, handler: nil)
+        controller.addAction(okAction)
+        controller.addAction(cancelAction)
+        present(controller, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -41,6 +65,22 @@ class LoadUsersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constant.SegueID.UPDATE_DATA, sender: self)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            askDelete(indexPath: indexPath)
+        }
+    }
+    
+    //MARK: UISearchBar Delegate
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.getUsers(with: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.getUsers()
     }
     
     // MARK: - Navigation
