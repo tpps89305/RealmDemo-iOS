@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,34 @@
 		F6B24A4226EEF7CB00C36833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B24A4026EEF7CB00C36833 /* LaunchScreen.storyboard */; };
 		F6B24A4D26EEF7CB00C36833 /* RealmDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A4C26EEF7CB00C36833 /* RealmDemoTests.swift */; };
 		F6B24A5826EEF7CB00C36833 /* RealmDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A5726EEF7CB00C36833 /* RealmDemoUITests.swift */; };
+		F6B24A6A26EEF9E500C36833 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F6B24A6926EEF9E500C36833 /* RealmSwift */; };
+		F6B24A6F26EEFA8800C36833 /* DemoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A6E26EEFA8800C36833 /* DemoUser.swift */; };
+		F6B24A7026EEFA8800C36833 /* DemoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A6E26EEFA8800C36833 /* DemoUser.swift */; };
+		F6B24A7126EEFA8800C36833 /* DemoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A6E26EEFA8800C36833 /* DemoUser.swift */; };
+		F6B24A7626EF1BB800C36833 /* DemoDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7526EF1BB800C36833 /* DemoDBHandler.swift */; };
+		F6B24A7726EF1BB800C36833 /* DemoDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7526EF1BB800C36833 /* DemoDBHandler.swift */; };
+		F6B24A7826EF1BB800C36833 /* DemoDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7526EF1BB800C36833 /* DemoDBHandler.swift */; };
+		F6B24A7D26EF1F8900C36833 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7C26EF1F8900C36833 /* LoadDataViewController.swift */; };
+		F6B24A7E26EF1F8900C36833 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7C26EF1F8900C36833 /* LoadDataViewController.swift */; };
+		F6B24A7F26EF1F8900C36833 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A7C26EF1F8900C36833 /* LoadDataViewController.swift */; };
+		F6B24A8426EF1FB800C36833 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8326EF1FB800C36833 /* AddDataViewController.swift */; };
+		F6B24A8526EF1FB800C36833 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8326EF1FB800C36833 /* AddDataViewController.swift */; };
+		F6B24A8626EF1FB800C36833 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8326EF1FB800C36833 /* AddDataViewController.swift */; };
+		F6B24A8C26EF216800C36833 /* LoadDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8B26EF216800C36833 /* LoadDataViewModel.swift */; };
+		F6B24A8D26EF216800C36833 /* LoadDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8B26EF216800C36833 /* LoadDataViewModel.swift */; };
+		F6B24A8E26EF216800C36833 /* LoadDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A8B26EF216800C36833 /* LoadDataViewModel.swift */; };
+		F6B24A9626EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9526EF22F900C36833 /* LoadDataCellViewModel.swift */; };
+		F6B24A9726EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9526EF22F900C36833 /* LoadDataCellViewModel.swift */; };
+		F6B24A9826EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9526EF22F900C36833 /* LoadDataCellViewModel.swift */; };
+		F6B24A9D26EF253500C36833 /* LoadDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9C26EF253500C36833 /* LoadDataCell.swift */; };
+		F6B24A9E26EF253500C36833 /* LoadDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9C26EF253500C36833 /* LoadDataCell.swift */; };
+		F6B24A9F26EF253500C36833 /* LoadDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24A9C26EF253500C36833 /* LoadDataCell.swift */; };
+		F6B24AA426EF280E00C36833 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AA326EF280E00C36833 /* Constant.swift */; };
+		F6B24AA526EF280E00C36833 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AA326EF280E00C36833 /* Constant.swift */; };
+		F6B24AA626EF280E00C36833 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AA326EF280E00C36833 /* Constant.swift */; };
+		F6B24AAD26EF32DD00C36833 /* AddDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AAC26EF32DD00C36833 /* AddDataViewModel.swift */; };
+		F6B24AAE26EF32DD00C36833 /* AddDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AAC26EF32DD00C36833 /* AddDataViewModel.swift */; };
+		F6B24AAF26EF32DE00C36833 /* AddDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24AAC26EF32DD00C36833 /* AddDataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +77,15 @@
 		F6B24A5326EEF7CB00C36833 /* RealmDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B24A5726EEF7CB00C36833 /* RealmDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDemoUITests.swift; sourceTree = "<group>"; };
 		F6B24A5926EEF7CB00C36833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6B24A6E26EEFA8800C36833 /* DemoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUser.swift; sourceTree = "<group>"; };
+		F6B24A7526EF1BB800C36833 /* DemoDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDBHandler.swift; sourceTree = "<group>"; };
+		F6B24A7C26EF1F8900C36833 /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
+		F6B24A8326EF1FB800C36833 /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
+		F6B24A8B26EF216800C36833 /* LoadDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewModel.swift; sourceTree = "<group>"; };
+		F6B24A9526EF22F900C36833 /* LoadDataCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataCellViewModel.swift; sourceTree = "<group>"; };
+		F6B24A9C26EF253500C36833 /* LoadDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataCell.swift; sourceTree = "<group>"; };
+		F6B24AA326EF280E00C36833 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F6B24AAC26EF32DD00C36833 /* AddDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B24A6A26EEF9E500C36833 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +137,11 @@
 		F6B24A3426EEF7C700C36833 /* RealmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F6B24AAB26EF2CEE00C36833 /* Model */,
+				F6B24AAA26EF2CCA00C36833 /* View */,
+				F6B24A8A26EF211800C36833 /* ViewModel */,
 				F6B24A3526EEF7C700C36833 /* AppDelegate.swift */,
 				F6B24A3726EEF7C700C36833 /* SceneDelegate.swift */,
-				F6B24A3926EEF7C700C36833 /* ViewController.swift */,
-				F6B24A3B26EEF7C700C36833 /* Main.storyboard */,
 				F6B24A3E26EEF7CB00C36833 /* Assets.xcassets */,
 				F6B24A4026EEF7CB00C36833 /* LaunchScreen.storyboard */,
 				F6B24A4326EEF7CB00C36833 /* Info.plist */,
@@ -128,6 +167,38 @@
 			path = RealmDemoUITests;
 			sourceTree = "<group>";
 		};
+		F6B24A8A26EF211800C36833 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6B24A8B26EF216800C36833 /* LoadDataViewModel.swift */,
+				F6B24A9526EF22F900C36833 /* LoadDataCellViewModel.swift */,
+				F6B24AAC26EF32DD00C36833 /* AddDataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6B24AAA26EF2CCA00C36833 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6B24A3B26EEF7C700C36833 /* Main.storyboard */,
+				F6B24A3926EEF7C700C36833 /* ViewController.swift */,
+				F6B24A7C26EF1F8900C36833 /* LoadDataViewController.swift */,
+				F6B24A8326EF1FB800C36833 /* AddDataViewController.swift */,
+				F6B24A9C26EF253500C36833 /* LoadDataCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6B24AAB26EF2CEE00C36833 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6B24A6E26EEFA8800C36833 /* DemoUser.swift */,
+				F6B24A7526EF1BB800C36833 /* DemoDBHandler.swift */,
+				F6B24AA326EF280E00C36833 /* Constant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +215,9 @@
 			dependencies = (
 			);
 			name = RealmDemo;
+			packageProductDependencies = (
+				F6B24A6926EEF9E500C36833 /* RealmSwift */,
+			);
 			productName = RealmDemo;
 			productReference = F6B24A3226EEF7C700C36833 /* RealmDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +289,9 @@
 				Base,
 			);
 			mainGroup = F6B24A2926EEF7C700C36833;
+			packageReferences = (
+				F6B24A6826EEF9E500C36833 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = F6B24A3326EEF7C700C36833 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B24A9626EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */,
+				F6B24A8C26EF216800C36833 /* LoadDataViewModel.swift in Sources */,
+				F6B24A7626EF1BB800C36833 /* DemoDBHandler.swift in Sources */,
 				F6B24A3A26EEF7C700C36833 /* ViewController.swift in Sources */,
+				F6B24AAD26EF32DD00C36833 /* AddDataViewModel.swift in Sources */,
+				F6B24A6F26EEFA8800C36833 /* DemoUser.swift in Sources */,
 				F6B24A3626EEF7C700C36833 /* AppDelegate.swift in Sources */,
+				F6B24A8426EF1FB800C36833 /* AddDataViewController.swift in Sources */,
+				F6B24A7D26EF1F8900C36833 /* LoadDataViewController.swift in Sources */,
+				F6B24AA426EF280E00C36833 /* Constant.swift in Sources */,
 				F6B24A3826EEF7C700C36833 /* SceneDelegate.swift in Sources */,
+				F6B24A9D26EF253500C36833 /* LoadDataCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B24A7E26EF1F8900C36833 /* LoadDataViewController.swift in Sources */,
+				F6B24A7726EF1BB800C36833 /* DemoDBHandler.swift in Sources */,
+				F6B24AAE26EF32DD00C36833 /* AddDataViewModel.swift in Sources */,
+				F6B24AA526EF280E00C36833 /* Constant.swift in Sources */,
+				F6B24A8D26EF216800C36833 /* LoadDataViewModel.swift in Sources */,
 				F6B24A4D26EEF7CB00C36833 /* RealmDemoTests.swift in Sources */,
+				F6B24A7026EEFA8800C36833 /* DemoUser.swift in Sources */,
+				F6B24A8526EF1FB800C36833 /* AddDataViewController.swift in Sources */,
+				F6B24A9726EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */,
+				F6B24A9E26EF253500C36833 /* LoadDataCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +371,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B24A7F26EF1F8900C36833 /* LoadDataViewController.swift in Sources */,
+				F6B24A7826EF1BB800C36833 /* DemoDBHandler.swift in Sources */,
+				F6B24AAF26EF32DE00C36833 /* AddDataViewModel.swift in Sources */,
+				F6B24AA626EF280E00C36833 /* Constant.swift in Sources */,
+				F6B24A8E26EF216800C36833 /* LoadDataViewModel.swift in Sources */,
 				F6B24A5826EEF7CB00C36833 /* RealmDemoUITests.swift in Sources */,
+				F6B24A7126EEFA8800C36833 /* DemoUser.swift in Sources */,
+				F6B24A8626EF1FB800C36833 /* AddDataViewController.swift in Sources */,
+				F6B24A9826EF22F900C36833 /* LoadDataCellViewModel.swift in Sources */,
+				F6B24A9F26EF253500C36833 /* LoadDataCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +697,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6B24A6826EEF9E500C36833 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6B24A6926EEF9E500C36833 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B24A6826EEF9E500C36833 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6B24A2A26EEF7C700C36833 /* Project object */;
 }
