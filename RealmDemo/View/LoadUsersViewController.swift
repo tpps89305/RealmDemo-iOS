@@ -39,12 +39,12 @@ class LoadUsersViewController: UITableViewController, UISearchBarDelegate {
     }
     
     private func askDelete(indexPath: IndexPath) {
-        let controller = UIAlertController(title: "重大操作", message: "確定要刪除 \(viewModel.cellViewModels[indexPath.row].user.name) 嗎？", preferredStyle: .actionSheet)
-        let okAction = UIAlertAction(title: "刪除", style: .destructive) { action in
+        let controller = UIAlertController(title: "AlertDialog.DangerousOperation".localized, message: String(format: "AlertDialog.AreYouSureToDelete".localized, viewModel.cellViewModels[indexPath.row].user.name), preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "Button.Delete".localized, style: .destructive) { action in
             self.viewModel.deleteUser(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        let cancelAction = UIAlertAction(title: "算了", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Button.Cancel".localized, style: .cancel, handler: nil)
         controller.addAction(okAction)
         controller.addAction(cancelAction)
         present(controller, animated: true, completion: nil)

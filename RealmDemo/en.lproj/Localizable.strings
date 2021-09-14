@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  RealmDemo
+
+  Created by 楊朝富 on 2021/9/14.
+  
+*/
+
+"AlertDialog.CreateSuccess" = "Create Success";
+"AlertDialog.CreateFail" = "Create Fail";
+"AlertDialog.PleaseInput" = "Please fill in all the information";
+"AlertDialog.DangerousOperation" = "Dangerous Operation";
+"AlertDialog.AreYouSureToDelete" = "Are you sure you want to delete %@?";
+"AlertDialog.UpdateSuccess" = "Update Success";
+
+"Button.OK" = "OK";
+"Button.Cancel" = "Never Mind";
+"Button.Delete" = "Delete";
+
+"Catalog.CreateUser" = "Create User";
+"Catelog.ViewUsers" = "View Users";
+
+"Cell.Age" = "Age: ";
+"Cell.Address" = "Address: ";

@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
-        <!--新增資料-->
+        <!--新增用戶-->
         <scene sceneID="aJx-QE-6fW">
             <objects>
                 <viewController id="8Xe-Ck-QnS" customClass="AddUserViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,6 +72,9 @@
                                 <rect key="frame" x="16" y="133" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Xe-Ck-QnS" id="UnE-ng-X1e"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-Lr-86f">
                                 <rect key="frame" x="16" y="199" width="382" height="21"/>
@@ -83,6 +86,9 @@
                                 <rect key="frame" x="16" y="228" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Xe-Ck-QnS" id="fDz-RP-H37"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBm-GB-az5">
                                 <rect key="frame" x="16" y="294" width="382" height="21"/>
@@ -94,6 +100,9 @@
                                 <rect key="frame" x="16" y="323" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="location"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Xe-Ck-QnS" id="vcx-8q-Zxp"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpB-WA-Uho">
                                 <rect key="frame" x="186.5" y="453" width="41" height="36"/>
@@ -129,7 +138,7 @@
                             <constraint firstItem="uuo-fH-ZfS" firstAttribute="top" secondItem="x26-6f-scM" secondAttribute="top" constant="16" id="yez-pF-TTs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="新增資料" id="ntp-BK-PIW"/>
+                    <navigationItem key="navigationItem" title="新增用戶" id="ntp-BK-PIW"/>
                     <connections>
                         <outlet property="fieldAddress" destination="mW3-5J-sze" id="Orn-uv-X8u"/>
                         <outlet property="fieldAge" destination="KrF-i0-qZB" id="LxV-cs-O3A"/>
@@ -140,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-331"/>
         </scene>
-        <!--閱覽資料-->
+        <!--閱覽用戶-->
         <scene sceneID="dAm-ca-oTT">
             <objects>
                 <tableViewController id="Wba-6u-aMG" customClass="LoadUsersViewController" customModule="RealmDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,22 +166,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-qq-j59">
-                                            <rect key="frame" x="8" y="8" width="398" height="100"/>
+                                            <rect key="frame" x="16" y="16" width="382" height="84"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es1-yJ-ai4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="33.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsO-gR-jgv">
-                                                    <rect key="frame" x="0.0" y="33.5" width="398" height="33"/>
+                                                    <rect key="frame" x="0.0" y="28" width="382" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIu-qt-eZJ">
-                                                    <rect key="frame" x="0.0" y="66.5" width="398" height="33.5"/>
+                                                    <rect key="frame" x="0.0" y="56" width="382" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -181,10 +190,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3Sz-qq-j59" firstAttribute="top" secondItem="wmz-za-13V" secondAttribute="top" constant="8" id="5mv-TQ-MHF"/>
-                                        <constraint firstAttribute="trailing" secondItem="3Sz-qq-j59" secondAttribute="trailing" constant="8" id="9Cm-S3-E6r"/>
-                                        <constraint firstAttribute="bottom" secondItem="3Sz-qq-j59" secondAttribute="bottom" constant="8" id="GLP-LG-vx4"/>
-                                        <constraint firstItem="3Sz-qq-j59" firstAttribute="leading" secondItem="wmz-za-13V" secondAttribute="leading" constant="8" id="nou-oB-2rH"/>
+                                        <constraint firstItem="3Sz-qq-j59" firstAttribute="top" secondItem="wmz-za-13V" secondAttribute="top" constant="16" id="5mv-TQ-MHF"/>
+                                        <constraint firstAttribute="trailing" secondItem="3Sz-qq-j59" secondAttribute="trailing" constant="16" id="9Cm-S3-E6r"/>
+                                        <constraint firstAttribute="bottom" secondItem="3Sz-qq-j59" secondAttribute="bottom" constant="16" id="GLP-LG-vx4"/>
+                                        <constraint firstItem="3Sz-qq-j59" firstAttribute="leading" secondItem="wmz-za-13V" secondAttribute="leading" constant="16" id="nou-oB-2rH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -199,7 +208,7 @@
                             <outlet property="delegate" destination="Wba-6u-aMG" id="zVW-JG-cDH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="閱覽資料" id="jk8-cB-hZz"/>
+                    <navigationItem key="navigationItem" title="閱覽用戶" id="jk8-cB-hZz"/>
                     <connections>
                         <segue destination="gsE-QI-biZ" kind="show" identifier="updateUser" id="z2e-CD-LSe"/>
                     </connections>
@@ -226,6 +235,9 @@
                                 <rect key="frame" x="16" y="133" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gsE-QI-biZ" id="t8S-WG-sJT"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BML-x6-K3L">
                                 <rect key="frame" x="16" y="199" width="382" height="21"/>
@@ -237,6 +249,9 @@
                                 <rect key="frame" x="16" y="228" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gsE-QI-biZ" id="mCu-So-Mak"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-Hv-WIR">
                                 <rect key="frame" x="16" y="294" width="382" height="21"/>
@@ -248,6 +263,9 @@
                                 <rect key="frame" x="16" y="323" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="location"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gsE-QI-biZ" id="XGi-59-kAr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byM-Bl-Ude">
                                 <rect key="frame" x="186.5" y="453" width="41" height="36"/>

@@ -10,7 +10,7 @@ import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let items = ["新增資料", "閱覽資料"]
+    let items = ["Catalog.CreateUser".localized, "Catelog.ViewUsers".localized]
     
     override func viewDidLoad() {
         super.viewDidLoad()

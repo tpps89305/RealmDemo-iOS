@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UpdateUserViewController: UIViewController {
+class UpdateUserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var fieldName: UITextField!
     @IBOutlet weak var fieldAge: UITextField!
@@ -32,14 +32,23 @@ class UpdateUserViewController: UIViewController {
         updateUser.address = fieldAddress.text ?? ""
         
         viewModel.updateUser(originUser: user, updateUser: updateUser)
-        showAlertDialog(title: "更新完畢")
+        showAlertDialog(title: "AlertDialog.UpdateSuccess".localized)
     }
     
     private func showAlertDialog(title: String, message: String = "") {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Button.OK".localized, style: .default, handler: nil)
         controller.addAction(okAction)
         present(controller, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == fieldName {
+            fieldAge.becomeFirstResponder()
+        } else if textField == fieldAddress {
+            fieldAddress.resignFirstResponder()
+        }
+        return true
     }
     
     /*

@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "1fq-xK-6Aj"; */
+"1fq-xK-6Aj.text" = "Name";
+
+/* Class = "UINavigationItem"; title = "管理介面"; ObjectID = "A8V-Y0-8wJ"; */
+"A8V-Y0-8wJ.title" = "Manage Page";
+
+/* Class = "UILabel"; text = "年齡"; ObjectID = "BML-x6-K3L"; */
+"BML-x6-K3L.text" = "Age";
+
+/* Class = "UITextField"; placeholder = "地址"; ObjectID = "Bbs-ww-YRc"; */
+"Bbs-ww-YRc.placeholder" = "Address";
+
+/* Class = "UILabel"; text = "地址"; ObjectID = "FFl-Hv-WIR"; */
+"FFl-Hv-WIR.text" = "Address";
+
+/* Class = "UITextField"; placeholder = "年齡"; ObjectID = "GIg-UH-se0"; */
+"GIg-UH-se0.placeholder" = "Age";
+
+/* Class = "UINavigationItem"; title = "更新資料"; ObjectID = "KIm-MF-EkK"; */
+"KIm-MF-EkK.title" = "Update Page";
+
+/* Class = "UITextField"; placeholder = "年齡"; ObjectID = "KrF-i0-qZB"; */
+"KrF-i0-qZB.placeholder" = "Age";
+
+/* Class = "UITextField"; placeholder = "姓名"; ObjectID = "Ng2-FI-AkY"; */
+"Ng2-FI-AkY.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "儲存"; ObjectID = "byM-Bl-Ude"; */
+"byM-Bl-Ude.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "地址"; ObjectID = "cBm-GB-az5"; */
+"cBm-GB-az5.text" = "Address";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "es1-yJ-ai4"; */
+"es1-yJ-ai4.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "姓名"; ObjectID = "ghk-BS-eBb"; */
+"ghk-BS-eBb.placeholder" = "Name";
+
+/* Class = "UINavigationItem"; title = "閱覽資料"; ObjectID = "jk8-cB-hZz"; */
+"jk8-cB-hZz.title" = "View Users";
+
+/* Class = "UIButton"; normalTitle = "新增"; ObjectID = "jpB-WA-Uho"; */
+"jpB-WA-Uho.normalTitle" = "Create";
+
+/* Class = "UITextField"; placeholder = "地址"; ObjectID = "mW3-5J-sze"; */
+"mW3-5J-sze.placeholder" = "Address";
+
+/* Class = "UILabel"; text = "地址"; ObjectID = "nIu-qt-eZJ"; */
+"nIu-qt-eZJ.text" = "Address";
+
+/* Class = "UILabel"; text = "年齡"; ObjectID = "nsO-gR-jgv"; */
+"nsO-gR-jgv.text" = "Age";
+
+/* Class = "UINavigationItem"; title = "新增資料"; ObjectID = "ntp-BK-PIW"; */
+"ntp-BK-PIW.title" = "Create User";
+
+/* Class = "UILabel"; text = "年齡"; ObjectID = "pfS-Lr-86f"; */
+"pfS-Lr-86f.text" = "Age";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "uuo-fH-ZfS"; */
+"uuo-fH-ZfS.text" = "Name";

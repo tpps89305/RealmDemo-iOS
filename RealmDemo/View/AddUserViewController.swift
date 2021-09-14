@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddUserViewController: UIViewController {
+class AddUserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var fieldName: UITextField!
     @IBOutlet weak var fieldAge: UITextField!
@@ -27,20 +27,29 @@ class AddUserViewController: UIViewController {
         let address = fieldAddress.text ?? ""
         
         if name == "" || age == 0 || address == "" {
-            showAlertDialog(title: "新增失敗", message: "請填入所有資訊")
+            showAlertDialog(title: "AlertDialog.CreateFail".localized, message: "AlertDialog.PleaseInput".localized)
             return
         }
         
         let user = DemoUser.init(name: name, age: age, address: address)
         viewModel.addData(user: user)
-        showAlertDialog(title: "新增完畢")
+        showAlertDialog(title: "AlertDialog.CreateSuccess".localized)
     }
     
     private func showAlertDialog(title: String, message: String = "") {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Button.OK".localized, style: .default, handler: nil)
         controller.addAction(okAction)
         present(controller, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == fieldName {
+            fieldAge.becomeFirstResponder()
+        } else if textField == fieldAddress {
+            fieldAddress.resignFirstResponder()
+        }
+        return true
     }
     
     /*

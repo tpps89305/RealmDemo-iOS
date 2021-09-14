@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  RealmDemo
+
+  Created by 楊朝富 on 2021/9/14.
+  
+*/
+
+"AlertDialog.CreateSuccess" = "新增成功";
+"AlertDialog.CreateFail" = "新增失敗";
+"AlertDialog.PleaseInput" = "請填入所有資訊";
+"AlertDialog.DangerousOperation" = "危險操作";
+"AlertDialog.AreYouSureToDelete" = "確定要刪除 %@ 嗎？";
+"AlertDialog.UpdateSuccess" = "更新完畢";
+
+"Button.OK" = "好";
+"Button.Cancel" = "算了";
+"Button.Delete" = "刪除";
+
+"Catalog.CreateUser" = "新增用戶";
+"Catelog.ViewUsers" = "閱覽用戶";
+
+"Cell.Age" = "年齡：";
+"Cell.Address" = "地址：";
